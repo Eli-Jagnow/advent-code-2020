@@ -21,6 +21,14 @@ public class Advent2
                 char key = params[2].charAt(0);
                 String pass = params[4];
 
+                //Find if the key appears in either position
+                boolean pos1 = pass.charAt(min-1) == key;
+                boolean pos2 = pass.charAt(max-1) == key;
+
+                //Calculate if the pass is valid
+                if((pos1 && !pos2) || (!pos1 && pos2))
+                { validPass++; }
+
                 /*
                 ** LEFTOVERS FROM PART ONE **
 

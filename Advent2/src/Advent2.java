@@ -14,14 +14,35 @@ public class Advent2
 
             while((line = br.readLine()) != null)
             {
+                //Seperate the line into its parameters
                 String[] params = line.split("[-: ]");
-                int min = params[0];
-                int max = params[1];
-                char key = params[2];
+                int min = Integer.parseInt(params[0]);
+                int max = Integer.parseInt(params[1]);
+                char key = params[2].charAt(0);
                 String pass = params[4];
+
+                /*
+                ** LEFTOVERS FROM PART ONE **
+
+                //Find the number of times the key appears
+                int keyCount = 0;
+                int index = pass.indexOf(key, 0);
+                while(index != -1)
+                {
+                    keyCount++;
+                    index = pass.indexOf(key, index + 1);
+                }
+
+                //Calculate if the pass is valid
+                if(min <= keyCount && keyCount <= max)
+                { validPass++; }
+                */
             }
         }
         catch(Exception e)
         { e.printStackTrace(); }
+
+        //Print the number of valid passes
+        System.out.println(validPass);
     }
 }

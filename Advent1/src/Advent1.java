@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class App
+public class Advent1
 {
     public static void main(String[] args) throws Exception
     {

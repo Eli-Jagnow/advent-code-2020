@@ -8,7 +8,7 @@ public class App
         String input = "";
         
         //Read the file and add all numbers within it to the input string
-        try(BufferedReader br = new BufferedReader(new FileReader("C:\\dev\\AdventCode\\AdventCode\\src\\input.txt")))
+        try(BufferedReader br = new BufferedReader(new FileReader("C:\\dev\\advent-code-2020\\Advent1\\src\\input.txt")))
         {
             String line;
             while((line = br.readLine()) != null)
